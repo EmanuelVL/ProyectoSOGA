@@ -1,3 +1,3 @@
 <?php
 
-Route::view('/', 'home')->name('home
+Route::view('/', 'home')->name('home');
