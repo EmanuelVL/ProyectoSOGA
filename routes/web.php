@@ -1,3 +1,3 @@
 <?php
 
-Route::view('/', 'PageController@home')->name('home');
+Route::view('/', 'home')->name('home');
