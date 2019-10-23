@@ -32,11 +32,6 @@
       color: white;
     }
 
-    .sidebar a.sal {
-      background-color: red;
-      color: white;
-    }
-
     .sidebar a:hover:not(.active) {
       background-color: #555;
       color: white;
@@ -73,7 +68,7 @@
       <a href="#">Areas</a>
       <a href="#">Profesores</a>
       <a href="#">Perfil</a>
-      <a href="#" class=".Sal">Salir</a>
+      <a href="#">Salir</a>
     </div>
 
     <div class="container">
