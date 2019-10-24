@@ -16,7 +16,7 @@ class CreateRecomendacionesTable extends Migration
         Schema::create('recomendaciones', function (Blueprint $table) {
             $table->int('id_area');
             $table->float('numero_recomen');//numero de recomendacion
-            $table->string('descripcion')
+            $table->string('descripcion');
             $table->timestamps();
         });
     }
