@@ -68,6 +68,7 @@
       <a href="#">Areas</a>
       <a href="#">Profesores</a>
       <a href="#">Perfil</a>
+      <a href="login">Registrar</a>
       <a href="#">Salir</a>
     </div>
 
