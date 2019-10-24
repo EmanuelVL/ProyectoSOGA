@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreateRecomendacionesTable extends Migration
 {
@@ -14,7 +14,7 @@ class CreateRecomendacionesTable extends Migration
     public function up()
     {
         Schema::create('recomendaciones', function (Blueprint $table) {
-            $table->int('id_area');
+            $table->float('id_area');
             $table->float('numero_recomen');//numero de recomendacion
             $table->string('descripcion');
             $table->timestamps();
