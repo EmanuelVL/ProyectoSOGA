@@ -29,29 +29,29 @@ class HomeController extends Controller{
         return view('home');
     }
 
-    public function agregarusarios(Request $datosNuevos){
-      return $datosNuevos->all();
-
-      $datosNuevos->validate([
-        'name' => 'required',
-        'userneme' => 'required',
+    public function agregarus(Request $datosNue){
+      //return $datosNue->all();
+      $datosNue->validate([
+        'nombre' => 'required',
+        'user_neme' => 'required',
+        'email' => 'required',
         'contrasena' => 'required'
       ]);
 
-      //Conectar
-       $datosNuevosSub = new App\users;
-      //Guardar en la base de datos
-        $datosNuevosSub->name = $datosNuevos->name ;
-        $datosNuevosSub->username = $datosNuevos->username ;
-        $datosNuevosSub->password = $datosNuevos->password ;
+      $nuevoR = new App\user;
 
-        if(!empty($datosNuevos->email)){
-          $datosNuevosSub->email = $datosNuevos->email ;
-        }
+      $nuevoR->name = $datosNue->nombre ;
+      $nuevoR->username = $datosNue->user_neme ;
+      $nuevoR->email = $datosNue->email ;
+      $nuevoR->password = $datosNue->contrasena ;
 
-        $datosNuevosSub->save();
+      $nuevoR->save();
 
-        return view('register');
+      return view('auth/register');
+    }
+
+    public function agregar(){
+      return view('auth/register');
     }
 
 
