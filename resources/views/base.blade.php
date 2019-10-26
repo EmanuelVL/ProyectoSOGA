@@ -64,11 +64,12 @@
   <body>
 
     <div class="sidebar">
-      <a href="">Inicio</a>
+      <a href="/home">Inicio</a>
       <a href="#">Areas</a>
+      <a href="#">Registrar área</a>
       <a href="#">Profesores</a>
+      <a href="/register">Registrar profesor</a>
       <a href="#">Perfil</a>
-      <a href="/register">Registrar</a>
       <a href="#">Salir</a>
     </div>
 
