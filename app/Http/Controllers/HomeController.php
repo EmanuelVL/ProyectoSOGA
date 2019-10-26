@@ -51,11 +51,7 @@ class HomeController extends Controller{
 
         $datosNuevosSub->save();
 
-        return view('home');
-    }
-
-    public function agregarus(){
-      return view('auth/register');
+        return view('register');
     }
 
 
