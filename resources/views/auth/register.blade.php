@@ -9,7 +9,7 @@
 
                 <div class="card-body">
 
-                    <form action="{{ route('agregarusua') }} method="POST"">
+                    <form action="{{route('agregarusua')}} method="POST"">
                         @csrf
 
                         <div class="form-group row">
