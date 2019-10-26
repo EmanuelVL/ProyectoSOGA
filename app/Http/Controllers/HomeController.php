@@ -25,12 +25,21 @@ class HomeController extends Controller{
      */
 
     public function index(){
+
         return view('home');
     }
 
     public function agregarusarios(Request $datosNuevos){
+      return $datosNuevos->all();
+
+      $datosNuevos->validate([
+        'name' => 'required',
+        'userneme' => 'required',
+        'contrasena' => 'required'
+      ]);
+
       //Conectar
-        $datosNuevosSub = new App\Registra;
+       $datosNuevosSub = new App\Agregar;
       //Guardar en la base de datos
         $datosNuevosSub->name = $datosNuevos->name ;
         $datosNuevosSub->username = $datosNuevos->username ;
@@ -46,7 +55,7 @@ class HomeController extends Controller{
     }
 
     public function agregarus(){
-      return view('register');
+      return view('auth/register');
     }
 
 
