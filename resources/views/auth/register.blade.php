@@ -5,11 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('Registrar') }}</div>
 
                 <div class="card-body">
 
-                    <form method="POST" action="{{ route('agrgarusua') }}">
+                    <form action="{{ route('agregarusua') }} method="POST"">
                         @csrf
 
                         <div class="form-group row">
@@ -75,7 +75,7 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-                        <label>* son campos obligarorios </label>
+                        <label>* son campos obligarorio</label>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

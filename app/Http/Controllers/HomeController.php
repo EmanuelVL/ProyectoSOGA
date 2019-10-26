@@ -6,17 +6,17 @@ use Illuminate\Http\Request;
 
 use App;
 
-class HomeController extends Controller
-{
+class HomeController extends Controller{
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+//Validar si hay secion abierta
+    /*public function __construct()
     {
         $this->middleware('auth');
-    }
+    }*/
 
     /*
      * Show the application dashboard.
@@ -24,20 +24,11 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-    public function index()
-    {
+    public function index(){
         return view('home');
     }
 
     public function agregarusarios(Request $datosNuevos){
-
-      // se validan los datos
-        /*$datosNuevos->validate[(
-          'name' => 'required',
-          'username' => 'required',
-          'password' => 'required'
-        )]*/
-
       //Conectar
         $datosNuevosSub = new App\Registra;
       //Guardar en la base de datos
@@ -54,9 +45,9 @@ class HomeController extends Controller
         return view('register');
     }
 
-      public function agregarus(){
-        return view('register');
-      }
+    public function agregarus(){
+      return view('register');
+    }
 
 
 }
