@@ -39,7 +39,7 @@ class HomeController extends Controller{
       ]);
 
       //Conectar
-       $datosNuevosSub = new App\Agregar;
+       $datosNuevosSub = new App\users;
       //Guardar en la base de datos
         $datosNuevosSub->name = $datosNuevos->name ;
         $datosNuevosSub->username = $datosNuevos->username ;
