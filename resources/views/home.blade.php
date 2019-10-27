@@ -2,6 +2,20 @@
 
 @section('title', 'Inicio')
 
+@section('style')
+    .card-header{
+        width: 50%;
+        height: 5%;
+        padding: 20px 0;
+        border-style: solid;
+        text-align: center;
+        margin: auto;
+    }
+    .card-body{
+        border-style:
+    }
+@endsection
+
 @section('content')
     <div class="container ">
         <div class="row justify-content-center">
