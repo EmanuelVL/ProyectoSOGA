@@ -1,6 +1,6 @@
-@extends('base')
+@extends('sidebar')
 
-@section('secion')
+@section('seccion')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -65,7 +65,7 @@
                             <br>
                         </tr>
                       @endforeach
-                      
+
                       <button type="submit" name="botonA" class="btn btn-primary">Registrar</button>
                     </form>
 
