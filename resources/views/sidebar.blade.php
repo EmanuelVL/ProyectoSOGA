@@ -75,7 +75,7 @@
 
     <div class="container">
       <div class="modal-body">
-        @yield('secion')
+        @yield('seccion')
       </div>
     </div>
 
