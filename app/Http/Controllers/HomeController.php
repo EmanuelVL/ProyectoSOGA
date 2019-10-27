@@ -30,11 +30,14 @@ class HomeController extends Controller{
     }
 
     public function agregarus(Request $datosNue){
+      //$verAreas = App\areas::All();
+
+      //return view('auth/register', compact('verAreas'));
+      //return view('auth/register')->with('areas',$areas);
       //return $datosNue->all();
       $datosNue->validate([
         'nombre' => 'required',
         'user_neme' => 'required',
-        'email' => 'required',
         'contrasena' => 'required'
       ]);
 
@@ -51,8 +54,18 @@ class HomeController extends Controller{
     }
 
     public function agregar(){
-      return view('auth/register');
+      $verAreas = App\areas::All();
+
+      return view('auth/register', compact('verAreas'));
+      //return view('auth/register');
     }
+
+    /*public function verAreas(){
+      $nombres = App\areas::all();
+
+      //return view('auth/register', compact('areas'));
+      return view('auth/register')->with('areas',$areas);
+    }*/
 
 
 }
