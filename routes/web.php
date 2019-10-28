@@ -1,5 +1,6 @@
 <?php
 
+Route::get('/','Auth\LoginController@formaLogin')->middleware('guest');
 Route::post('home', 'Auth\LoginController@login')->name('login');
 Route::view('/', 'auth/login')->name('home');
 
@@ -13,3 +14,6 @@ Route::post('register','HomeController@agregarus')->name('agrgarusua');
 
 Route::view('menu', 'menu')->name('menu');
 Route::post('menu', 'HomeController@index')->name('menu');
+
+
+Route::get('/','Auth\LoginController@formaLogin')->middleware('guest');

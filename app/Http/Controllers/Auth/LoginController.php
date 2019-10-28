@@ -7,6 +7,14 @@ use App\Http\Controllers\Controller;
 
 class LoginController extends Controller
 {
+  public function __construct(){
+    $this->middleware('guest',['only'=>'formaLogin ']);
+  }
+
+  public function formaLogin(){
+    return view('home');
+  }
+
   public function login(){
 
     $licencia = $this->validate(request(),[
@@ -15,7 +23,7 @@ class LoginController extends Controller
     ]);
 
     if(Auth::attempt($licencia)){
-      return view('/menu');
+      return redirect()->route('menu');
     }
     return back()
         ->withErrors(['email' => 'El correo o la contraseña no se encontraron']);
