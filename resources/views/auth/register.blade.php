@@ -31,7 +31,7 @@
 
                         <div class="form-group col-md-6">
                           <label for="inputPassword4">Password*</label>
-                          <input name="contrasena" class="form-control" id="inputPassword4" placeholder="Password">
+                          <input type="password" name="contrasena" class="form-control" id="inputPassword4" placeholder="Password">
                         </div>
                       </div>
 
@@ -55,16 +55,6 @@
                       </button>
                         </div>
                       @enderror
-
-                      @foreach($verAreas as $item)
-                        <tr>
-                            <th scope="row"><input type="checkbox" aria-label="Checkbox for following text input" name="{{$item->nombre_area}}"></th>
-                            <td>
-                              <a>{{$item->nombre_area}}</a>
-                            </td>
-                            <br>
-                        </tr>
-                      @endforeach
 
                       <button type="submit" name="botonA" class="btn btn-primary">Registrar</button>
                     </form>
