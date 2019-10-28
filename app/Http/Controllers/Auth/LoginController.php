@@ -19,6 +19,5 @@ class LoginController extends Controller
     }
     return back()
         ->withErrors(['email' => 'El correo o la contraseña no se encontraron']);
-
   }
 }
