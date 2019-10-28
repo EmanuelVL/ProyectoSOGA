@@ -1,6 +1,6 @@
 <?php
 
-Route::view('/', 'home')->name('home');
+Route::view('/', 'auth/login')->name('home');
 
 Auth::routes();
 
