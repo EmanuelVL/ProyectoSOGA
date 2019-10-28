@@ -12,7 +12,12 @@
         margin: auto;
     }
     .card-body{
-        border-style:
+        border-style: solid;
+        margin: auto;
+        height; 15%;
+        width: 50%;
+        padding: 20px 0;
+        text-align: center;
     }
 @endsection
 
