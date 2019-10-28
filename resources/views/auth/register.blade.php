@@ -1,4 +1,4 @@
-@extends('sidebar')
+@extends('sideBar')
 @section('title', 'Registro')
 @section('seccion')
 <div class="container">

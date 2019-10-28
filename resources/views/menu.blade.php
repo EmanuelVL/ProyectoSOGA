@@ -1,32 +1,34 @@
-@extends('layouts.template')
+@extends('sideBar')
 
 @section('title', 'Menú')
 
-@section('style')
-    .button {
-      background-color: #4CAF50;
-      border: none;
-      color: white;
-      padding: 50px 50px;
-      text-align: center;
-      font-size: 16px;
-      cursor: pointer;
-    }
 
-    .button:hover {
-      background-color: green;
-    }
 
-    html, body {
-        width: 100%;
-    }
-    table {
-        margin: 0 auto;
-        margin-top: 13%;
-    }
-@endsection
+@section('seccion')
+<style>
+  .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 50px 50px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
 
-@section('content')
+  .button:hover {
+    background-color: green;
+  }
+
+  html, body {
+      width: 100%;
+  }
+  table {
+      margin: 0 auto;
+      margin-top: 13%;
+  }
+</style>
+
     <table style="width:75%">
     <tr>
       <th> <button class="button">Área 1</button> </th>
