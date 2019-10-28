@@ -41,9 +41,9 @@
                                 </div>
                             </div>
 
-                            @error('email')
+                            @error('credenciales')
                               <div class="alert alert-danger">
-                                {!! $errors->first('email') !!}
+                                {!! $errors->first('credenciales') !!}
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                               </div>

@@ -26,6 +26,6 @@ class LoginController extends Controller
       return redirect()->route('menu');
     }
     return back()
-        ->withErrors(['email' => 'El correo o la contraseña no se encontraron']);
+        ->withErrors(['credenciales' => 'El correo o la contraseña no se encontraron']);
   }
 }
