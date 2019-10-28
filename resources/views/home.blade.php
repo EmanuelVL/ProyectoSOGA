@@ -1,25 +1,6 @@
-@extends('layouts.template')
+@extends('layouts.app')
 
 @section('title', 'Inicio')
-
-@section('style')
-    .card-header{
-        width: 50%;
-        height: 5%;
-        padding: 20px 0;
-        border-style: solid;
-        text-align: center;
-        margin: auto;
-    }
-    .card-body{
-        border-style: solid;
-        margin: auto;
-        height; 15%;
-        width: 50%;
-        padding: 20px 0;
-        text-align: center;
-    }
-@endsection
 
 @section('content')
     <div class="container ">
@@ -36,7 +17,7 @@
                                 <label for="username" class="col-md-4 col-form-label text-md-right">{{ __('Nombre de usuario') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="username" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" autofocus>
+                                    <input id="username" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autofocus>
 
                                     @error('username')
                                         <span class="invalid-feedback" role="alert">
@@ -59,6 +40,14 @@
                                     @enderror
                                 </div>
                             </div>
+
+                            @error('email')
+                              <div class="alert alert-danger">
+                                {!! $errors->first('email') !!}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </div>
+                            @enderror
 
                             <div class="form-group row">
                                 <div class="col-md-6 offset-md-4">

@@ -13,10 +13,6 @@ class HomeController extends Controller{
      * @return void
      */
 //Validar si hay secion abierta
-    /*public function __construct()
-    {
-        $this->middleware('auth');
-    }*/
 
     /*
      * Show the application dashboard.
@@ -52,6 +48,7 @@ class HomeController extends Controller{
       $verAreas = App\areas::All();
 
       return view('auth/register', compact('verAreas'));
+      //return view('auth/register');
     }
 
     /*public function verAreas(){
