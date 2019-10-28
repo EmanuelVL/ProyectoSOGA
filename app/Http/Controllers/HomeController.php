@@ -36,8 +36,11 @@ class HomeController extends Controller{
 
       $nuevoR->name = $datosNue->nombre ;
       $nuevoR->username = $datosNue->user_neme ;
-      $nuevoR->email = $datosNue->email ;
       $nuevoR->password = $datosNue->contrasena ;
+
+      if(!empty($datosNue->email)) {
+        $nuevoR->email = $datosNue->email ;
+      }
 
       $nuevoR->save();
 
